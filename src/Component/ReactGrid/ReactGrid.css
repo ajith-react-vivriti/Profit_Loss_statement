@@ -1,0 +1,11 @@
+/* ReactGrid.css */
+.ag-content {
+  margin: 20px;
+}
+
+.ag-theme-alpine {
+  height: 500px;
+  width: 100%;
+}
+
+/* Add more styles as needed for your grid */

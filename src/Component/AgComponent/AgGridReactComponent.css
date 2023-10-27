@@ -1,0 +1,12 @@
+.ag-theme-alpine {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+}
+.ag-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}

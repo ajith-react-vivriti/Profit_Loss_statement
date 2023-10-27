@@ -1,0 +1,394 @@
+[
+  {
+    "_id": {
+      "$oid": "63738908a75b9f63bd1be73c"
+    },
+    "company_id": "55_PL_2023",
+    "profit_loss_statement": {
+      "_id": {
+        "$oid": "63738908a75b9f63bd1be73c"
+      },
+      "reported_currency": "INR",
+      "period": "FY",
+      "calendar_year": 2023,
+      "cid": "55",
+      "company_type": "FS",
+      "created_user": "test@yopmail.com",
+      "line_data": [
+        {
+          "name": "Total Revenue",
+          "q1_total_revenue": "63977427",
+          "q2_total_revenue": "34374616",
+          "q3_total_revenue": "70073877.14",
+          "q4_total_revenue": "107040935",
+          "values": [
+            {
+              "name": "Revenue from Operations",
+              "q1_total_revenue": "61395845",
+              "q2_total_revenue": "32765736",
+              "q3_total_revenue": "66948488",
+              "q4_total_revenue": "102025097",
+              "tags": [
+                {
+                  "particular": "Interest income on Loans  Advances",
+                  "line_item_selection": "Interest Income on loans",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "51845185"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "26560781"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "58891100"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "86903631"
+                    }
+                  ]
+                },
+                {
+                  "particular": "Processing Fees on Loans",
+                  "line_item_selection": "Processing fees",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "8902660"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "6112955"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "7965388"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "14920060"
+                    }
+                  ]
+                },
+                {
+                  "particular": "CM Fees",
+                  "line_item_selection": "Other operational income",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "648000"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "92000"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "92000"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "201406"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Other Income",
+              "q1_total_revenue": "2581582",
+              "q2_total_revenue": "1608880",
+              "q3_total_revenue": "3125389.14",
+              "q4_total_revenue": "5015838",
+              "tags": [
+                {
+                  "particular": "Interest Income on Fixed Deposits",
+                  "line_item_selection": "Interest income (on deposits, SLR)",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "280351"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "1020153"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "1921725"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "3252653"
+                    }
+                  ]
+                },
+                {
+                  "particular": "Capital Gain  Liquid Fund",
+                  "line_item_selection": "Other non operating Income",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "914790"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "0"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "0"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "0"
+                    }
+                  ]
+                },
+                {
+                  "particular": "Interest on Deposits with Financial Institution",
+                  "line_item_selection": "Interest income (on deposits, SLR)",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "1249749"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "556284"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "1138818"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "1698339"
+                    }
+                  ]
+                },
+                {
+                  "particular": "Miscellaneous Income",
+                  "line_item_selection": "Other non operating Income",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "56687"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "0"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "5307.14"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "5307"
+                    }
+                  ]
+                },
+                {
+                  "particular": "Interest on Unsecured Loans",
+                  "line_item_selection": "Investment income",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "80005"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "32443"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "59539"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "59539"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Expenditure",
+          "q1_total_revenue": "4438500",
+          "q2_total_revenue": "1000000",
+          "q3_total_revenue": "350000",
+          "q4_total_revenue": "758000",
+          "values": [
+            {
+              "name": "Purchase of traded goods",
+              "q1_total_revenue": "4438500",
+              "q2_total_revenue": "1000000",
+              "q3_total_revenue": "350000",
+              "q4_total_revenue": "758000",
+              "tags": [
+                {
+                  "particular": "Provision for Bad Debts",
+                  "line_item_selection": "Other expenses",
+                  "selections": [
+                    {
+                      "calendar_quarter": "Mar-2023",
+                      "line_item_revenue": "4438500"
+                    },
+                    {
+                      "calendar_quarter": "Jun-2023",
+                      "line_item_revenue": "1000000"
+                    },
+                    {
+                      "calendar_quarter": "Sep-2023",
+                      "line_item_revenue": "350000"
+                    },
+                    {
+                      "calendar_quarter": "Dec-2023",
+                      "line_item_revenue": "758000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Employee Benefit Expense / Employee cost",
+              "q1_total_revenue": "0",
+              "q2_total_revenue": "0",
+              "q3_total_revenue": "0",
+              "q4_total_revenue": "0",
+              "tags": []
+            },
+            {
+              "name": "Finance Costs / Finance Expenses",
+              "q1_total_revenue": "0",
+              "q2_total_revenue": "0",
+              "q3_total_revenue": "0",
+              "q4_total_revenue": "0",
+              "tags": []
+            },
+            {
+              "name": "Depreciation, Depletion And Amortisation Expense",
+              "q1_total_revenue": "0",
+              "q2_total_revenue": "0",
+              "q3_total_revenue": "0",
+              "q4_total_revenue": "0",
+              "tags": []
+            },
+            {
+              "name": "Other expenses / Admin expenses",
+              "q1_total_revenue": "0",
+              "q2_total_revenue": "0",
+              "q3_total_revenue": "0",
+              "q4_total_revenue": "0",
+              "tags": []
+            },
+            {
+              "name": "Provision and Write off Expenses",
+              "q1_total_revenue": "0",
+              "q2_total_revenue": "0",
+              "q3_total_revenue": "0",
+              "q4_total_revenue": "0",
+              "tags": []
+            },
+            {
+              "name": "Non-operating income / (expenses)",
+              "q1_total_revenue": "0",
+              "q2_total_revenue": "0",
+              "q3_total_revenue": "0",
+              "q4_total_revenue": "0",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "name": "Profit Before Prior Period Items, Exceptl Items, EOI And Tax",
+          "q1_total_revenue": "59538927",
+          "q2_total_revenue": "33374616",
+          "q3_total_revenue": "69723877.14",
+          "q4_total_revenue": "106282935",
+          "tags": []
+        },
+        {
+          "name": "Prior Period Items Before Tax",
+          "q1_total_revenue": "0",
+          "q2_total_revenue": "0",
+          "q3_total_revenue": "0",
+          "q4_total_revenue": "0",
+          "tags": []
+        },
+        {
+          "name": "Exceptional Items",
+          "q1_total_revenue": "0",
+          "q2_total_revenue": "0",
+          "q3_total_revenue": "0",
+          "q4_total_revenue": "0",
+          "tags": []
+        },
+        {
+          "name": "Extra-Ordinary Items",
+          "q1_total_revenue": "0",
+          "q2_total_revenue": "0",
+          "q3_total_revenue": "0",
+          "q4_total_revenue": "0",
+          "tags": []
+        },
+        {
+          "name": "Profit Before Tax",
+          "q1_total_revenue": "59538927",
+          "q2_total_revenue": "33374616",
+          "q3_total_revenue": "69723877.14",
+          "q4_total_revenue": "106282935",
+          "tags": []
+        },
+        {
+          "name": "Tax expenses",
+          "q1_total_revenue": "0",
+          "q2_total_revenue": "0",
+          "q3_total_revenue": "0",
+          "q4_total_revenue": "0",
+          "tags": []
+        },
+        {
+          "name": "Net Profit / (Loss) After Tax",
+          "q1_total_revenue": "59538927",
+          "q2_total_revenue": "33374616",
+          "q3_total_revenue": "69723877.14",
+          "q4_total_revenue": "106282935",
+          "tags": []
+        },
+        {
+          "name": "Other Comprehensive Income",
+          "q1_total_revenue": "0",
+          "q2_total_revenue": "0",
+          "q3_total_revenue": "0",
+          "q4_total_revenue": "0",
+          "tags": []
+        },
+        {
+          "name": "Total Comprehensive Income",
+          "q1_total_revenue": "59538927",
+          "q2_total_revenue": "33374616",
+          "q3_total_revenue": "69723877.14",
+          "q4_total_revenue": "106282935",
+          "tags": []
+        },
+        {
+          "name": "Dividend",
+          "q1_total_revenue": "0",
+          "q2_total_revenue": "0",
+          "q3_total_revenue": "0",
+          "q4_total_revenue": "0",
+          "tags": []
+        }
+      ]
+    },
+    "created_user": "test@yopmail.com",
+    "_class": "com.vivritiamc.credit.core.entity.profitloss.ProfitLossEntity"
+  }
+]
