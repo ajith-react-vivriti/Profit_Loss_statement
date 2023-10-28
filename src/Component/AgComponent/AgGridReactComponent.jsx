@@ -38,9 +38,6 @@ const Customkey = (p) => {
   if (Revenue_Value !== "") {
     // const index1 = Rows.includes(Revenue_Value);
     const index1 = Rows[0].findIndex((row) => row === Revenue_Value);
-    console.log(Revenue_Value);
-
-    console.log(index1);
     const roww = Rows[0].slice(index1 + 1, 0, p.data.children);
     console.log("Rows after:", roww);
   }
@@ -134,9 +131,26 @@ function AgGridReactComponent() {
     return <div>Loading...</div>;
   }
   const childrenRow = mergedRows.map((item) => item.children);
-  console.log(mergedRows);
+  // console.log(mergedRows);
   console.log(childrenRow);
-  console.log(columns);
+  let i = 0;
+  // for (let i = 0; childrenRow.length > i; i++) {
+  if (Array.isArray(childrenRow[i]) && childrenRow[i].length > 0) {
+    var childrenRowValue = childrenRow[i];
+    console.log(childrenRowValue.length);
+
+    mergedRows.splice(childrenRowValue.length - 1, 0, ...childrenRowValue);
+    console.log(mergedRows);
+
+    // console.log(k + 1);
+    // for (let j = 0; j < childrenRow[i].length; j++) {
+    //   i++;
+    // }
+
+    // }
+  }
+
+  console.log(mergedRows);
 
   return (
     <div className="ag-content">

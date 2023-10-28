@@ -10,3 +10,6 @@
   align-items: flex-start;
   width: 100%;
 }
+/* div.ag-row:nth-child(1) {
+  display: none !important;
+} */
