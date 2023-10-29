@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
@@ -8,7 +8,7 @@ import generateColumn from "./ColumnsData";
 const data = require("../../ProfitLossStatement_55.json");
 const jsonData = data.map((item) => item.profit_loss_statement);
 const calendarYears = jsonData.map((item) => item.calendar_year);
-console.log(Rows);
+// console.log(Rows);
 function mergeArrayOfObjects(...arrays) {
   const maxLength = Math.max(...arrays.map((arr) => arr.length));
   const mergedArray = [];
@@ -25,6 +25,15 @@ function mergeArrayOfObjects(...arrays) {
   return mergedArray;
 }
 function AgGridReactComponent() {
+  const [storedPId, setStoredPId] = useState(null);
+
+  useEffect(() => {
+    const fetchData = () => {
+      const storedData = parseInt(localStorage.getItem("P_id"));
+      setStoredPId(storedData);
+    };
+    fetchData();
+  }, []);
   const defaultColDef = useMemo(
     () => ({
       flex: 1,
@@ -49,25 +58,24 @@ function AgGridReactComponent() {
     return <div>Loading...</div>;
   }
   const childrenRow = mergedRows.map((item) => item.children);
-  console.log(mergedRows);
-  console.log(childrenRow);
+  let i = storedPId || "";
 
-  for (let i = 0; childrenRow.length > i; i++) {
-    if (Array.isArray(childrenRow[i]) && childrenRow[i].length > 0) {
-      let childrenRowValue = childrenRow[i];
-
-      let childrenRwLgth = 0;
-      for (let j = 0; i >= j; j++) {
-        childrenRowValue = childrenRow[j];
-        childrenRwLgth = i + childrenRowValue.length;
-      }
-      console.log(childrenRwLgth);
-      mergedRows.splice(childrenRwLgth - 1, 0, ...childrenRowValue);
+  if (Array.isArray(childrenRow[i]) && childrenRow[i].length > 0) {
+    switch (Number(i)) {
+      case 1:
+        let childrenRowValue1 = childrenRow[0];
+        console.log(childrenRow[0]);
+        mergedRows.splice(1, 0, ...childrenRowValue1);
+        break;
+      case 2:
+        let childrenRowValue2 = childrenRow[1];
+        console.log("ghjjj", childrenRow[1]);
+        mergedRows.splice(2, 0, ...childrenRowValue2);
+        break;
+      default:
+        break;
     }
   }
-
-  console.log(mergedRows);
-
   return (
     <div className="ag-content">
       <div className="ag-theme-alpine">
