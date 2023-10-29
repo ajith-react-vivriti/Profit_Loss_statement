@@ -11,6 +11,8 @@ const processRowData = (data) => {
   const rowData = [];
   data.forEach((item) => {
     const { id, name, line_data } = item.profit_loss_statement || {};
+    let currentPId = 1;
+    let currentCId = 1;
     if (line_data) {
       line_data.forEach((lineItem) => {
         const {
@@ -22,6 +24,7 @@ const processRowData = (data) => {
           q4_total_revenue,
         } = lineItem || {};
         const rowItem = {
+          P_id: currentPId,
           Revenue_type: lineItemName,
           ["Q1Revenue" + year]: q1_total_revenue,
           ["Q2Revenue" + year]: q2_total_revenue,
@@ -29,6 +32,7 @@ const processRowData = (data) => {
           ["Q4Revenue" + year]: q4_total_revenue,
           children: [],
         };
+        currentPId++;
 
         if (values) {
           values.forEach((value) => {
@@ -41,12 +45,14 @@ const processRowData = (data) => {
             } = value || {};
 
             const valueItem = {
+              C_id: currentCId,
               Revenue_type: name,
               ["Q1Revenue" + year]: q1_total_revenue,
               ["Q2Revenue" + year]: q2_total_revenue,
               ["Q3Revenue" + year]: q3_total_revenue,
               ["Q4Revenue" + year]: q4_total_revenue,
             };
+            currentCId++;
             rowItem.children.push(valueItem);
           });
         }

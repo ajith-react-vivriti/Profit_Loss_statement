@@ -10,7 +10,7 @@ const data = require("../../ProfitLossStatement_55.json");
 const jsonData = data.map((item) => item.profit_loss_statement);
 const companyId = jsonData.map((item) => item.company_type);
 const calendarYears = jsonData.map((item) => item.calendar_year);
-
+console.log(Rows);
 function mergeArrayOfObjects(...arrays) {
   const maxLength = Math.max(...arrays.map((arr) => arr.length));
   const mergedArray = [];
@@ -26,29 +26,29 @@ function mergeArrayOfObjects(...arrays) {
   }
   return mergedArray;
 }
-
 const Customkey = (p) => {
   const [isClicked, setIsClicked] = useState(false);
+  // const [Revenue_Value, setRevenueValue] = useState("");
 
   const handleClick = () => {
     setIsClicked(!isClicked);
-  };
-  const Revenue_Value = isClicked ? p.value : "";
 
-  if (Revenue_Value !== "") {
-    // const index1 = Rows.includes(Revenue_Value);
-    const index1 = Rows[0].findIndex((row) => row === Revenue_Value);
-    const roww = Rows[0].slice(index1 + 1, 0, p.data.children);
-    console.log("Rows after:", roww);
-  }
+    if (!isClicked) {
+      // if (p.data.P_id !== undefined) {
+      console.log(p.data.P_id);
+    }
+    // setRevenueValue(isClicked ? p.value : "");
+  };
 
   return (
     <div onClick={handleClick} style={{ cursor: "pointer" }}>
       {isClicked ? <KeyboardArrowDownIcon /> : <KeyboardArrowRightIcon />}
+
       {p.value}
     </div>
   );
 };
+
 function AgGridReactComponent() {
   const generateColumns = () => {
     const dynamicColumns = calendarYears.map((year) => ({
@@ -131,23 +131,21 @@ function AgGridReactComponent() {
     return <div>Loading...</div>;
   }
   const childrenRow = mergedRows.map((item) => item.children);
-  // console.log(mergedRows);
+  console.log(mergedRows);
   console.log(childrenRow);
-  let i = 0;
-  // for (let i = 0; childrenRow.length > i; i++) {
-  if (Array.isArray(childrenRow[i]) && childrenRow[i].length > 0) {
-    var childrenRowValue = childrenRow[i];
-    console.log(childrenRowValue.length);
 
-    mergedRows.splice(childrenRowValue.length - 1, 0, ...childrenRowValue);
-    console.log(mergedRows);
+  for (let i = 0; childrenRow.length > i; i++) {
+    if (Array.isArray(childrenRow[i]) && childrenRow[i].length > 0) {
+      let childrenRowValue = childrenRow[i];
 
-    // console.log(k + 1);
-    // for (let j = 0; j < childrenRow[i].length; j++) {
-    //   i++;
-    // }
-
-    // }
+      let childrenRwLgth = 0;
+      for (let j = 0; i >= j; j++) {
+        childrenRowValue = childrenRow[j];
+        childrenRwLgth = i + childrenRowValue.length;
+      }
+      console.log(childrenRwLgth);
+      mergedRows.splice(childrenRwLgth - 1, 0, ...childrenRowValue);
+    }
   }
 
   console.log(mergedRows);
