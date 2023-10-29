@@ -4,11 +4,9 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./AgGridReactComponent.css";
 import { Rows } from "./RowData";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import generateColumn from "./ColumnsData";
 const data = require("../../ProfitLossStatement_55.json");
 const jsonData = data.map((item) => item.profit_loss_statement);
-const companyId = jsonData.map((item) => item.company_type);
 const calendarYears = jsonData.map((item) => item.calendar_year);
 console.log(Rows);
 function mergeArrayOfObjects(...arrays) {
@@ -26,88 +24,7 @@ function mergeArrayOfObjects(...arrays) {
   }
   return mergedArray;
 }
-const Customkey = (p) => {
-  const [isClicked, setIsClicked] = useState(false);
-  // const [Revenue_Value, setRevenueValue] = useState("");
-
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-
-    if (!isClicked) {
-      // if (p.data.P_id !== undefined) {
-      console.log(p.data.P_id);
-    }
-    // setRevenueValue(isClicked ? p.value : "");
-  };
-
-  return (
-    <div onClick={handleClick} style={{ cursor: "pointer" }}>
-      {isClicked ? <KeyboardArrowDownIcon /> : <KeyboardArrowRightIcon />}
-
-      {p.value}
-    </div>
-  );
-};
-
 function AgGridReactComponent() {
-  const generateColumns = () => {
-    const dynamicColumns = calendarYears.map((year) => ({
-      headerName: year.toString(),
-      columnGroupShow: "open",
-      marryChildren: true,
-      children: [
-        { columnGroupShow: "closed" },
-        {
-          headerName: "Q1 Revenue",
-          field: `Q1Revenue${year}`,
-          type: "number",
-          columnGroupShow: "open",
-        },
-        {
-          headerName: "Q2 Revenue",
-          field: `Q2Revenue${year}`,
-          type: "number",
-          columnGroupShow: "open",
-        },
-        {
-          headerName: "Q3 Revenue",
-          field: `Q3Revenue${year}`,
-          type: "number",
-          columnGroupShow: "open",
-        },
-        {
-          headerName: "Q4 Revenue",
-          field: `Q4Revenue${year}`,
-          type: "number",
-          columnGroupShow: "open",
-        },
-      ],
-    }));
-
-    const headerData = dynamicColumns.map((column, index) => ({
-      headerName: calendarYears[index],
-      children: column.children,
-    }));
-
-    return [
-      {
-        headerName: companyId[0],
-        field: `Revenue_type`,
-        cellRenderer: Customkey,
-        // cellRendererParams: { onClick: dataTransfer },
-        // cellRendererSelector: (params) => {
-        //   if (params.value === "Total Revenue") {
-        //     return { component: "Customkey" };
-        //   }
-        //   return null;
-        // },
-      },
-      ...headerData,
-    ];
-  };
-
-  const columns = useMemo(() => generateColumns(), calendarYears);
-
   const defaultColDef = useMemo(
     () => ({
       flex: 1,
@@ -118,6 +35,7 @@ function AgGridReactComponent() {
     }),
     []
   );
+  const columns = useMemo(() => generateColumn, calendarYears);
 
   function getMergedRowsByIndices(dataRows, indices) {
     const selectedRows = indices.map((index) => dataRows[index]);
